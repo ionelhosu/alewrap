@@ -48,7 +48,7 @@ function gameEnv:getState()
     self._state.observation = self._state.observation or self._screen:grab():clone()
     self._state.observation:copy(self._screen:grab())
 
-    -- lives will not be reported externally
+    -- lives will also be reported externally
     return self._state.observation, self._state.reward, self._state.terminal, self._state.lives
 end
 
