@@ -49,7 +49,7 @@ function gameEnv:getState()
     self._state.observation:copy(self._screen:grab())
 
     -- lives will not be reported externally
-    return self._state.observation, self._state.reward, self._state.terminal
+    return self._state.observation, self._state.reward, self._state.terminal, self._state.lives
 end
 
 
